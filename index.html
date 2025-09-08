@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alternativa Assistência</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            background-image: url('https://drive.google.com/uc?export=view&id=1ZpkPuj6AZDh9VVticf_2gBm0r19_nB-Z');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            color: #fff;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+        
+        .overlay {
+            background-color: rgba(0, 0, 0, 0.7);
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            z-index: -1;
+        }
+        
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 30px 20px;
+            text-align: center;
+            z-index: 1;
+        }
+        
+        .logo {
+            max-width: 220px;
+            margin: 0 auto 30px;
+            display: block;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+        }
+        
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 40px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+        
+        .btn {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: #ff5b00;
+            color: white;
+            text-decoration: none;
+            padding: 16px 30px;
+            border-radius: 50px;
+            font-size: 1.2rem;
+            font-weight: 600;
+            margin: 15px 0;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        
+        .btn:hover {
+            background-color: #e05200;
+            transform: translateY(-3px);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+        }
+        
+        .btn i {
+            margin-right: 12px;
+            font-size: 1.5rem;
+        }
+        
+        .contact-info {
+            margin-top: 40px;
+            padding: 20px;
+            background-color: rgba(0, 0, 0, 0.5);
+            border-radius: 15px;
+        }
+        
+        .contact-info p {
+            margin: 10px 0;
+            font-size: 1.1rem;
+        }
+        
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: rgba(0, 0, 0, 0.7);
+            margin-top: 40px;
+        }
+        
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2rem;
+            }
+            
+            .btn {
+                padding: 14px 25px;
+                font-size: 1.1rem;
+            }
+            
+            .logo {
+                max-width: 180px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="overlay"></div>
+    
+    <div class="container">
+        <img src="https://drive.google.com/uc?export=view&id=1wjNCu5dhURw3RFRbX7dMVG0m2VyHROGC" alt="Logo Alternativa Assistência" class="logo">
+        
+        <h1>Entre em Contato</h1>
+        
+        <a href="https://wa.me/5585982066196" class="btn">
+            <i class="fab fa-whatsapp"></i> WhatsApp
+        </a>
+        
+        <a href="mailto:contatoaaem@alternativaassistencia.com" class="btn">
+            <i class="far fa-envelope"></i> E-mail
+        </a>
+        
+        <div class="contact-info">
+            <p><i class="fas fa-phone"></i> 85 98206-6196</p>
+            <p><i class="far fa-envelope"></i> contatoaaem@alternativaassistencia.com</p>
+        </div>
+    </div>
+    
+    <footer>
+        <p>&copy; 2023 Alternativa Assistência - Todos os direitos reservados</p>
+    </footer>
+</body>
+</html>
