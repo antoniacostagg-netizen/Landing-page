@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Alternativa Assistência</title>
+    <title>Alternativa Assistência - Equipamentos Médicos</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
         * {
@@ -14,47 +14,66 @@
         }
         
         body {
-            background-image: url('https://drive.google.com/uc?export=view&id=1ZpkPuj6AZDh9VVticf_2gBm0r19_nB-Z');
-            background-size: cover;
-            background-position: center;
-            background-attachment: fixed;
+            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), #1a1a2e;
             color: #fff;
             min-height: 100vh;
             display: flex;
             flex-direction: column;
-            justify-content: space-between;
-        }
-        
-        .overlay {
-            background-color: rgba(0, 0, 0, 0.7);
-            position: absolute;
-            width: 100%;
-            height: 100%;
-            top: 0;
-            left: 0;
-            z-index: -1;
+            padding: 20px;
         }
         
         .container {
-            max-width: 600px;
+            max-width: 100%;
             margin: 0 auto;
-            padding: 30px 20px;
+            padding: 20px 15px;
             text-align: center;
-            z-index: 1;
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+        
+        .logo-container {
+            margin: 0 auto 30px;
+            text-align: center;
+            max-width: 300px;
         }
         
         .logo {
-            max-width: 220px;
-            margin: 0 auto 30px;
-            display: block;
-            border-radius: 10px;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+            width: 100%;
+            max-width: 280px;
+            margin-bottom: 15px;
+            border-radius: 12px;
+            box-shadow: 0 5px 15px rgba(255, 91, 0, 0.2);
+        }
+        
+        .logo-text {
+            color: #fff;
+            font-size: 1.4rem;
+            font-weight: bold;
+            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+            margin-bottom: 5px;
+        }
+        
+        .logo-subtext {
+            color: #ff5b00;
+            font-size: 1.1rem;
+            font-weight: 600;
+            letter-spacing: 1px;
         }
         
         h1 {
-            font-size: 2.5rem;
-            margin-bottom: 40px;
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+            font-size: 1.8rem;
+            margin-bottom: 30px;
+            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+            color: #fff;
+        }
+        
+        .buttons-container {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            margin-bottom: 30px;
         }
         
         .btn {
@@ -64,76 +83,105 @@
             background-color: #ff5b00;
             color: white;
             text-decoration: none;
-            padding: 16px 30px;
+            padding: 16px 25px;
             border-radius: 50px;
-            font-size: 1.2rem;
+            font-size: 1.1rem;
             font-weight: 600;
-            margin: 15px 0;
             transition: all 0.3s ease;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
         }
         
         .btn:hover {
             background-color: #e05200;
-            transform: translateY(-3px);
+            transform: translateY(-2px);
             box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
         }
         
         .btn i {
-            margin-right: 12px;
-            font-size: 1.5rem;
+            margin-right: 10px;
+            font-size: 1.4rem;
         }
         
         .contact-info {
-            margin-top: 40px;
-            padding: 20px;
-            background-color: rgba(0, 0, 0, 0.5);
+            margin-top: 25px;
+            padding: 20px 15px;
+            background: rgba(0, 0, 0, 0.25);
             border-radius: 15px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
         }
         
         .contact-info p {
-            margin: 10px 0;
-            font-size: 1.1rem;
+            margin: 12px 0;
+            font-size: 1rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
         }
         
         footer {
             text-align: center;
-            padding: 20px;
-            background-color: rgba(0, 0, 0, 0.7);
-            margin-top: 40px;
+            padding: 20px 15px;
+            margin-top: 30px;
+            font-size: 0.9rem;
+            color: rgba(255, 255, 255, 0.7);
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
         }
         
-        @media (max-width: 768px) {
+        /* Melhorias para telas muito pequenas */
+        @media (max-width: 380px) {
             h1 {
-                font-size: 2rem;
+                font-size: 1.6rem;
             }
             
             .btn {
-                padding: 14px 25px;
-                font-size: 1.1rem;
+                padding: 14px 20px;
+                font-size: 1rem;
             }
             
-            .logo {
-                max-width: 180px;
+            .logo-text {
+                font-size: 1.2rem;
+            }
+            
+            .logo-subtext {
+                font-size: 1rem;
             }
         }
+        
+        /* Animações suaves */
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        .container > * {
+            animation: fadeIn 0.8s ease-out forwards;
+        }
+        
+        .logo-container { animation-delay: 0.2s; }
+        h1 { animation-delay: 0.3s; }
+        .buttons-container { animation-delay: 0.4s; }
+        .contact-info { animation-delay: 0.5s; }
     </style>
 </head>
 <body>
-    <div class="overlay"></div>
-    
     <div class="container">
-        <img src="https://drive.google.com/uc?export=view&id=1wjNCu5dhURw3RFRbX7dMVG0m2VyHROGC" alt="Logo Alternativa Assistência" class="logo">
+        <div class="logo-container">
+            <div class="logo-text">Alternativa Assistência</div>
+            <div class="logo-subtext">EQUIPAMENTOS MÉDICOS</div>
+        </div>
         
         <h1>Entre em Contato</h1>
         
-        <a href="https://wa.me/5585982066196" class="btn">
-            <i class="fab fa-whatsapp"></i> WhatsApp
-        </a>
-        
-        <a href="mailto:contatoaaem@alternativaassistencia.com" class="btn">
-            <i class="far fa-envelope"></i> E-mail
-        </a>
+        <div class="buttons-container">
+            <a href="https://wa.me/5585982066196" class="btn">
+                <i class="fab fa-whatsapp"></i> WhatsApp
+            </a>
+            
+            <a href="mailto:contatoaaem@alternativaassistencia.com" class="btn">
+                <i class="far fa-envelope"></i> E-mail
+            </a>
+        </div>
         
         <div class="contact-info">
             <p><i class="fas fa-phone"></i> 85 98206-6196</p>
